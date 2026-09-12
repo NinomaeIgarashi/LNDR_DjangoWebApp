@@ -4,27 +4,14 @@ from . import views
 
 urlpatterns = [
 
-    path(
-        '',
-        views.student_list,
-        name='student_list'
-    ),
+    path('', views.student_list, name='student_list'),
+    path('add/', views.student_create, name='student_create'),
+    path('edit/<int:pk>/', views.student_update, name='student_update'),
+    path('delete/<int:pk>/', views.student_delete, name='student_delete'),
 
     path(
-        'add/',
-        views.student_create,
-        name='student_create'
-    ),
-
-    path(
-        'edit/<int:pk>/',
-        views.student_update,
-        name='student_update'
-    ),
-
-    path(
-        'delete/<int:pk>/',
-        views.student_delete,
-        name='student_delete'
-    ),
+        'dashboard/',
+        views.student_dashboard,
+        name='student_dashboard'
+    )
 ]
