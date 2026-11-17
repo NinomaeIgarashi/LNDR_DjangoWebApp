@@ -4,7 +4,13 @@
 <head>
     <title>Student Dashboard</title>
 </head>
-<body>
+<body> 
+    
+    <h1>Student Dashboard</h1>
+
+    <h2>Total Students: {{ total_students }}</h2>
+    
+    <p id="result-count" aria-live="polite">Showing 0 students</p>
     <section> 
         <label for="student-search">Search name or email:</label> 
         <input 
@@ -22,17 +28,7 @@
         <button type="button" id="refresh-students"> 
         Refresh Data 
         </button> 
-        </section> 
-    <p id="result-count" aria-live="polite">Showing 0 students</p>
-
-
-    <h1>Student Dashboard</h1>
-
-    <h2>Total Students</h2>
-
-    <p>
-        {{ total_students }}
-    </p>
+    </section>
 
     <hr>
 
