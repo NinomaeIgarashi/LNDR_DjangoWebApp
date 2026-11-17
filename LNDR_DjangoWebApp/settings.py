@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
-    'registration'
+    'registration',
+    "debug_toolbar"
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware'
 ]
 
 ROOT_URLCONF = 'LNDR_DjangoWebApp.urls'
@@ -127,6 +129,11 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+INTERNAL_IPS = [
+    "127.0.0.1",
+    "localhost",
+]
 
 LOGIN_REDIRECT_URL = '/registration/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
